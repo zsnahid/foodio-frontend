@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "../button";
 import { ArrowRight } from "lucide-react";
+import { Button } from "../ui/button";
 
 export default function Banner() {
   return (
@@ -48,7 +48,7 @@ export default function Banner() {
             height={474}
             className="absolute bottom-0 z-10"
           />
-          <div className="size-110 bg-black blur-xl rounded-full opacity-10 absolute bottom-0 left-12"></div>
+          <div className="size-110 bg-black blur-xl rounded-full opacity-15 absolute bottom-0 left-12"></div>
         </div>
       </div>
     </div>

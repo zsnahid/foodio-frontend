@@ -6,10 +6,11 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { Button } from "../button";
 import { ArrowRight } from "lucide-react";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import { Button } from "../ui/button";
+import Link from "next/link";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -48,13 +49,15 @@ export default function Navbar() {
         </NavigationMenuList>
       </NavigationMenu>
       <div id="signin-button-container">
-        <Button>
-          Sign in{" "}
-          <span>
-            {" "}
-            <ArrowRight />{" "}
-          </span>
-        </Button>
+        <Link href="/sign-in">
+          <Button>
+            Sign in{" "}
+            <span>
+              {" "}
+              <ArrowRight />{" "}
+            </span>
+          </Button>
+        </Link>
       </div>
     </div>
   );
