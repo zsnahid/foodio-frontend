@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/footer/footer";
+import ConditionalFooter from "@/components/footer/conditional-footer";
+import { Toaster } from "sonner";
 
 const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-cormorant-garamond",
@@ -26,10 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${cormorantGaramond.variable} ${manrope.variable} antialiased max-w-[90vw] mx-auto min-h-screen`}
+        className={`${cormorantGaramond.variable} ${manrope.variable} antialiased min-h-screen`}
       >
         {children}
-        <Footer />
+        <ConditionalFooter />
+        <Toaster position="top-center" />
       </body>
     </html>
   );

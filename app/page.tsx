@@ -4,10 +4,12 @@ import Navbar from "@/components/header/navbar";
 export default function Home() {
   return (
     <>
-      <header>
-        <Navbar />
-        <Banner />
-      </header>
+      <main className="max-w-[90vw] mx-auto">
+        <header>
+          <Navbar />
+          <Banner />
+        </header>
+      </main>
     </>
   );
 }
