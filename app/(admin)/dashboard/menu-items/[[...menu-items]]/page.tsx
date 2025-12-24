@@ -1,4 +1,7 @@
 "use client";
+import { AddCategoryForm } from "@/components/dashboard/menu-items/add-category-form";
+import { AddItemForm } from "@/components/dashboard/menu-items/add-item-form";
+import { EditItemForm } from "@/components/dashboard/menu-items/edit-item-form";
 import { Button } from "@/components/ui/button";
 import {
   Table,
@@ -9,7 +12,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Edit, Plus, Trash } from "lucide-react";
+import { Trash, Edit } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
 
@@ -19,30 +22,35 @@ const menuItems = [
     category: "Starters",
     price: "$24.00",
     status: "Available",
+    description: "Jumbo scallops with cauliflower purée and truffle oil.",
   },
   {
     name: "Mediterranean Olive Medley",
     category: "Starters",
     price: "$18.00",
     status: "Available",
+    description: "A mix of marinated olives.",
   },
   {
     name: "Citrus Swirl Delights",
     category: "Main Courses",
     price: "$32.00",
     status: "Available",
+    description: "A delightful citrus-infused main course.",
   },
   {
     name: "Creamy Garlic Shrimp Pasta",
     category: "Main Courses",
     price: "$45.00",
     status: "Available",
+    description: "Creamy pasta with garlic shrimp.",
   },
   {
     name: "Herb-Roasted Chicken Bowl",
     category: "Desserts",
     price: "$16.00",
     status: "Available",
+    description: "A healthy and savory chicken bowl.",
   },
 ];
 
@@ -71,17 +79,7 @@ export default function MenuItems() {
             <TabsTrigger value="menu-items">Menu Items</TabsTrigger>
             <TabsTrigger value="categories">Categories</TabsTrigger>
           </TabsList>
-          {activeTab === "menu-items" ? (
-            <Button>
-              <Plus className="mr-2 h-4 w-4" />
-              Add Item
-            </Button>
-          ) : (
-            <Button>
-              <Plus className="mr-2 h-4 w-4" />
-              Add Category
-            </Button>
-          )}
+          {activeTab === "menu-items" ? <AddItemForm /> : <AddCategoryForm />}
         </div>
         <TabsContent value="menu-items">
           <div className="mt-6 rounded-lg border">
@@ -107,9 +105,7 @@ export default function MenuItems() {
                       </Badge>
                     </TableCell>
                     <TableCell className="flex gap-2">
-                      <Button variant="ghost" size="icon">
-                        <Edit className="h-4 w-4" />
-                      </Button>
+                      <EditItemForm item={item} />
                       <Button
                         variant="ghost"
                         size="icon"
