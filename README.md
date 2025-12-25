@@ -60,12 +60,12 @@ Runs the linter to check for code quality and style issues.
 
 ## Screenshots
 
-| Screenshot                                             | Description           |
-| ------------------------------------------------------ | --------------------- |
-| ![Screenshot 1](public/Screenshot_20251225_074742.png) | Home page             |
-| ![Screenshot 2](public/Screenshot_20251225_074801.png) | Menu page             |
-| ![Screenshot 3](public/Screenshot_20251225_074811.png) | Cart page             |
-| ![Screenshot 4](public/Screenshot_20251225_074827.png) | Order page            |
-| ![Screenshot 5](public/Screenshot_20251225_074833.png) | User profile page     |
-| ![Screenshot 6](public/Screenshot_20251225_074847.png) | Admin dashboard       |
-| ![Screenshot 7](public/Screenshot_20251225_075324.png) | Admin menu items page |
+| Screenshot                                             |
+| ------------------------------------------------------ |
+| ![Screenshot 1](public/Screenshot_20251225_074742.png) |
+| ![Screenshot 2](public/Screenshot_20251225_074801.png) |
+| ![Screenshot 3](public/Screenshot_20251225_074811.png) |
+| ![Screenshot 4](public/Screenshot_20251225_074827.png) |
+| ![Screenshot 5](public/Screenshot_20251225_074833.png) |
+| ![Screenshot 6](public/Screenshot_20251225_074847.png) |
+| ![Screenshot 7](public/Screenshot_20251225_075324.png) |
